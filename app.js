@@ -6,7 +6,6 @@ const port = 3000;
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL
 });
-
 app.get('/tasks', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM tasks'); 
